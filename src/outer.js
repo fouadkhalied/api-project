@@ -33,7 +33,7 @@ const Outer = ({props})=>
             props.forEach((obj , index)=>{
                 return props.length > 0 ?
                         setTimeout(() => {
-                           return <li>{obj}</li>
+                           console.log(obj);
                         }, 50 * v * index)
                 : "no items to display"
             })
