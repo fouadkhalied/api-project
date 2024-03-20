@@ -56,6 +56,7 @@ function App() {
   return (
     <>
        <div className='div10'>
+        <h3 style={{color : 'white'}}>Type the country you want to search</h3>
        <div className='div1'>
        <input type='text' value={input} onChange={(e)=>{setinput(e.target.value)}}/>
        <img src={df} style={{display : loading ? 'block' : 'none'}} width="50px" height="40px" />
