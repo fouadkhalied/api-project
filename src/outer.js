@@ -8,37 +8,33 @@
 
 import './App.css';
 import { useState } from 'react';
-const df = 'https://m.media-amazon.com/images/G/01/ui/loadIndicators/loading-large_labeled._CB485921664_.gif'
+
 
 const Outer = ({props})=>
 {
     console.log("success");   
-    const [loading , setloading] = useState(false);
-
-    // if(c[2]) {
-    //     let v = 15;
-    //     for (let i=0 ; i<c.length ; i++) {
-    //       
-    //     }
-    //   }
-    //   else
-    //       console.log(c); 
+    
+    if(props[2]) {
+        let v = 15; 
+        const it = document.querySelector(".items ul");
+        it.innerHTML = ''
+        props.map((item , index)=>{
+            setTimeout(()=>{
+                const newListItem = document.createElement("li");
+                newListItem.textContent = item
+                it.appendChild(newListItem)
+            } , v * 50 * index)
+        })
+    } 
     let v= 21; 
     console.log(props);
     return(
         <div>
-            <img src={df} style={{display : loading ? 'block' : 'none'}} />
-           <ul>
-           {
-            props.forEach((obj , index)=>{
-                return props.length > 0 ?
-                        setTimeout(() => {
-                           console.log(obj);
-                        }, 50 * v * index)
-                : "no items to display"
-            })
-           }
-           </ul>
+            <div className='items'>
+               <ul>
+
+               </ul>
+            </div>
         </div>
     )
 }

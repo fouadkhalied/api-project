@@ -4,3 +4,53 @@
   padding: 0;
   box-sizing: border-box;
 }
+.items 
+{
+  font-size: 22px; 
+}
+.div10
+{
+  width: 50%;
+  margin: auto;
+  margin-top: 100px;
+  height: 300px;
+  text-align: center;
+  background-image: linear-gradient(to right, #000000 ,  rgb(226, 43, 180));
+  border-radius: 20px;
+}
+.div10 ul
+{
+  list-style-type: none;
+  color: white;
+}
+.div10 .div1
+{
+  display: flex;
+  margin-left: 250px;
+  width: 40%;
+  text-align: center;
+  padding-top: 20px;
+}
+.items
+{
+  height: 150px;
+  overflow: hidden;
+}
+.div1 input
+{
+  height: 40px;
+  width: 240px;
+  padding-left: 20px;
+  border-radius: 20px;
+}
+.div1 input:focus
+{
+  outline: none;
+}
+.div10 button
+{
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 20px;
+}
